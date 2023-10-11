@@ -19,7 +19,7 @@ const Item = ({ index, imgSrc, name, position }) => {
         <div className='item-item'>
             <img src={imgSrc} onClick={() => {
                 console.log("Detail 요청")
-                let url = "http://localhost:8087/SpringBoot2/PlayerDetail.do?name="+name;
+                let url = "http://54.180.85.251:8087/SpringBoot2/PlayerDetail.do?name="+name;
 
                 axios.post(url, { name: name })
                     .then((res) => {
